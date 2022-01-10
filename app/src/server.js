@@ -236,7 +236,24 @@ app.get('*', function (req, res) {
  * Check the functionality of STUN/TURN servers:
  * https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/
  */
-const iceServers = [{ urls: 'stun:stun.l.google.com:19302' }];
+const iceServers =[
+	{
+  iceTransportPolicy: "all",
+  reconnectTimer: 3000,
+
+  // These settings are no secret, since they are readable from the client side anyway
+  iceServers: [
+    {
+      urls: process.env.VUE_APP_STUN_URL,
+    },
+    {
+      urls: process.env.VUE_APP_TURN_URL,
+      username: process.env.VUE_APP_TURN_USER,
+      credential: process.env.VUE_APP_TURN_PASSWORD,
+    },
+  ],
+}
+];
 
 if (turnEnabled == 'true') {
     iceServers.push({
