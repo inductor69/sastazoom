@@ -244,7 +244,7 @@ const iceServers =[
   // These settings are no secret, since they are readable from the client side anyway
   iceServers: [
     {
-      urls: VUE_APP_STUN_URL,
+      urls: process.env.VUE_APP_STUN_URL,
     },
     {
         urls: turnUrls,
