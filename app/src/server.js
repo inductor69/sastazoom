@@ -244,12 +244,12 @@ const iceServers =[
   // These settings are no secret, since they are readable from the client side anyway
   iceServers: [
     {
-      urls: process.env.VUE_APP_STUN_URL,
+      urls: "stun:turn01.brie.fi:5349",
     },
     {
-      urls: process.env.VUE_APP_TURN_URL,
-      username: process.env.VUE_APP_TURN_USER,
-      credential: process.env.VUE_APP_TURN_PASSWORD,
+      urls: "turn:numb.viagenie.ca",
+      username:"aditya.kumar466.ak@gmail.com",
+      credential: "lemon123",
     },
   ],
 }
