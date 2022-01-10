@@ -244,24 +244,16 @@ const iceServers =[
   // These settings are no secret, since they are readable from the client side anyway
   iceServers: [
     {
-      urls: "stun:turn01.brie.fi:5349",
+      urls: VUE_APP_STUN_URL,
     },
     {
-      urls: "turn:numb.viagenie.ca",
-      username:"aditya.kumar466.ak@gmail.com",
-      credential: "lemon123",
+        urls: turnUrls,
+        username: turnUsername,
+        credential: turnCredential,
     },
   ],
 }
 ];
-
-if (turnEnabled == 'true') {
-    iceServers.push({
-        urls: turnUrls,
-        username: turnUsername,
-        credential: turnCredential,
-    });
-}
 
 /**
  * Expose server to external with https tunnel using ngrok
