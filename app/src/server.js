@@ -1,7 +1,7 @@
 /*
 http://patorjk.com/software/taag/#p=display&f=ANSI%20Regular&t=Server
 
-███████ ███████ ██████  ██    ██ ███████ ██████  
+███████ ███████ ██████  ██    ██ ███████ ██████ 
 ██      ██      ██   ██ ██    ██ ██      ██   ██ 
 ███████ █████   ██████  ██    ██ █████   ██████  
      ██ ██      ██   ██  ██  ██  ██      ██   ██ 
@@ -81,7 +81,7 @@ const { v4: uuidV4 } = require('uuid');
 
 const apiBasePath = '/api/v1'; // api endpoint path
 const api_docs = host + apiBasePath + '/docs'; // api docs
-const api_key_secret = process.env.API_KEY_SECRET || 'mirotalk_default_secret';
+const api_key_secret = process.env.API_KEY_SECRET || 'sasta_default_secret';
 const ngrokEnabled = process.env.NGROK_ENABLED;
 const ngrokAuthToken = process.env.NGROK_AUTH_TOKEN;
 const turnEnabled = process.env.TURN_ENABLED;
@@ -149,9 +149,9 @@ app.get(['/privacy'], (req, res) => {
 app.get('/join/', (req, res) => {
     if (Object.keys(req.query).length > 0) {
         log.debug('Request Query', req.query);
-        /* 
+        /*
             http://localhost:3000/join?room=test&name=mirotalk&audio=1&video=1
-            all params are mandatory for the direct room join 
+            all params are mandatory for the direct room join
         */
         let roomName = req.query.room;
         let peerName = req.query.name;
@@ -284,7 +284,7 @@ server.listen(port, null, () => {
     log.debug(
         `%c
 
-	███████╗██╗ ██████╗ ███╗   ██╗      ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
+	███████╗██╗ ██████╗ ███╗   ██╗      ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗
 	██╔════╝██║██╔════╝ ████╗  ██║      ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
 	███████╗██║██║  ███╗██╔██╗ ██║█████╗███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
 	╚════██║██║██║   ██║██║╚██╗██║╚════╝╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗

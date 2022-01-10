@@ -109,9 +109,9 @@ $ docker-compose down
 
 ```bash
 # The response will give you a entrypoint / Room URL for your meeting, where authorization: API_KEY_SECRET.
-$ curl -X POST "http://localhost:3000/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://mirotalk.up.railway.app/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://mirotalk.herokuapp.com/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "http://localhost:3000/api/v1/meeting" -H "authorization: sasta_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "https://mirotalk.up.railway.app/api/v1/meeting" -H "authorization: sasta_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "https://mirotalk.herokuapp.com/api/v1/meeting" -H "authorization: sasta_default_secret" -H "Content-Type: application/json"
 ```
 
 ## API Documentation
